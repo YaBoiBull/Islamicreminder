@@ -3,8 +3,8 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
-    background-color: #001f3f;
-    overflow: hidden;
+    background-color: #001f3f; /* Mørkeblå baggrundsfarve */
+    overflow: hidden; /* Skjuler elementer uden for vinduet */
 }
 
 .moon-star {
@@ -38,9 +38,9 @@ body {
 
 .star {
     position: absolute;
-    top: 15px;
-    left: 40px;
-    width: 15px;
+    top: 15px; /* Juster placering i forhold til den mindre måne */
+    left: 40px; /* Juster placering i forhold til den mindre måne */
+    width: 15px; /* Mindre størrelse */
     height: 15px;
     background-color: #ffd700;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -128,5 +128,23 @@ p#quote {
     .mood-box.expanded {
         padding: 40px;
         font-size: 1.5em;
+    }
+
+    .moon {
+        width: 40px; /* Mindre størrelse på mobil */
+        height: 40px;
+    }
+
+    .moon::before {
+        width: 30px;
+        height: 40px;
+        left: 7px;
+    }
+
+    .star {
+        width: 10px;
+        height: 10px;
+        top: 10px;
+        left: 28px;
     }
 }
