@@ -1,3 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
 .mood-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -7,6 +17,7 @@
 }
 
 .mood-box {
+    position: relative;
     padding: 40px;
     border-radius: 10px;
     color: white;
@@ -25,11 +36,32 @@
 .mood-box.hidden {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.5s;
 }
 
-p {
-    font-size: 1.2em;
-    color: #555;
-    margin-top: 30px;
+p#quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: white;
+    opacity: 0;
     transition: opacity 0.5s;
+}
+
+.happy {
+    background-color: #f7c600; /* yellow */
+}
+
+.sad {
+    background-color: #007bff; /* blue */
+}
+
+.motivated {
+    background-color: #28a745; /* green */
+}
+
+.stressed {
+    background-color: #dc3545; /* red */
 }
