@@ -26,8 +26,10 @@ function getQuote(mood) {
             box.classList.add('expanded');
         }
     });
+
+    const quoteElement = document.getElementById("quote");
     const moodQuotes = quotes[mood];
     const randomQuote = moodQuotes[Math.floor(Math.random() * moodQuotes.length)];
-    document.getElementById("quote").innerText = randomQuote;
-    document.getElementById("quote").style.opacity = 1;
+    quoteElement.innerText = randomQuote;
+    quoteElement.style.opacity = 1;
 }
