@@ -14,31 +14,28 @@ body {
 }
 
 .moon {
+    position: relative;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     background-color: #ffd700;
-    clip-path: circle(50% at 50% 50%);
-    transform: rotate(-45deg);
+    border-radius: 50%;
     overflow: hidden;
-    position: absolute;
 }
 
 .moon::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 60px;
+    width: 70px; /* Justeret bredde */
+    height: 70px; /* Justeret højde */
+    background-color: #001f3f; /* Samme farve som baggrunden */
     border-radius: 50%;
-    background-color: #001f3f;
-    left: 10px;
-    top: 0;
-    clip-path: circle(50% at 50% 50%);
+    top: -15px; /* Justeret position */
+    left: 15px; /* Justeret position */
 }
 
 .star {
     position: absolute;
-    top: 15px; /* Juster placering i forhold til den mindre måne */
+    top: 10px; /* Juster placering i forhold til den mindre måne */
     left: 40px; /* Juster placering i forhold til den mindre måne */
     width: 15px; /* Mindre størrelse */
     height: 15px;
@@ -136,15 +133,16 @@ p#quote {
     }
 
     .moon::before {
-        width: 30px;
-        height: 40px;
-        left: 7px;
+        width: 45px;
+        height: 45px;
+        top: -10px;
+        left: 15px;
     }
 
     .star {
         width: 10px;
         height: 10px;
-        top: 10px;
+        top: 5px;
         left: 28px;
     }
 }
