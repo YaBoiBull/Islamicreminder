@@ -20,6 +20,7 @@ const quotes = {
 function getQuote(mood) {
     const moodBoxes = document.querySelectorAll('.mood-box');
     moodBoxes.forEach(box => {
+        box.classList.remove('hidden', 'expanded'); // Nulstil alle klasser
         if (!box.classList.contains(mood)) {
             box.classList.add('hidden');
         } else {
