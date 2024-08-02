@@ -17,8 +17,7 @@ const quotes = {
     ]
 };
 
-function getQuote() {
-    const mood = document.getElementById("mood").value;
+function getQuote(mood) {
     const moodQuotes = quotes[mood];
     const randomQuote = moodQuotes[Math.floor(Math.random() * moodQuotes.length)];
     document.getElementById("quote").innerText = randomQuote;
