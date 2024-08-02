@@ -20,13 +20,17 @@ const quotes = {
 function getQuote(mood) {
     const moodBoxes = document.querySelectorAll('.mood-box');
     moodBoxes.forEach(box => {
-        box.classList.remove('hidden', 'expanded'); // Nulstil alle klasser
+        box.classList.remove('hidden', 'expanded');
         if (!box.classList.contains(mood)) {
             box.classList.add('hidden');
         } else {
             box.classList.add('expanded');
+            const moodQuotes = quotes[mood];
+            const randomQuote = moodQuotes[Math.floor(Math.random() * moodQuotes.length)];
+            box.innerText = randomQuote; // Erstat boksteksten med citatet
         }
     });
+}
 
     const quoteElement = document.getElementById("quote");
     const moodQuotes = quotes[mood];
