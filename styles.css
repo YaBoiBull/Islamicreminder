@@ -31,6 +31,10 @@ h1 {
     grid-row: span 2;
     padding: 80px;
     font-size: 2em;
+    text-align: center; /* Centrer teksten */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mood-box.hidden {
