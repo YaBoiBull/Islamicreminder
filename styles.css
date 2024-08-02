@@ -16,16 +16,28 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: #001f3f; /* Samme farve som baggrunden */
-    border: 5px solid #ffd700; /* Gul farve til månekant */
     border-radius: 50%;
-    clip-path: ellipse(70% 50% at 30% 50%);
+    background-color: #ffd700; /* Gul farve til måne */
+    clip-path: circle(50% at 50% 50%);
+    transform: rotate(-45deg); /* Juster rotation for den rigtige halvmåneform */
+}
+
+.moon::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #001f3f; /* Samme farve som baggrunden */
+    left: 20px;
+    top: 0;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .star {
     position: absolute;
-    top: 30px;
-    left: 65px;
+    top: 20px;
+    left: 70px;
     width: 20px;
     height: 20px;
     background-color: #ffd700; /* Gul farve */
