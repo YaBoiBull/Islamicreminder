@@ -11,7 +11,7 @@ const quotes = {
         "“He is the First and the Last.” (57:3)",
         "“So be patient. Indeed, the promise of Allah is truth.” (30:60)"
     ],
-    sad: [
+    frustrated: [
         "“Indeed, Allah is with the patient.” (2:153)",
         "“So verily, with the hardship, there is relief.” (94:6)",
         "“And We have certainly made the Quran easy for remembrance.” (54:17)",
@@ -23,7 +23,7 @@ const quotes = {
         "“And He found you lost and guided [you].” (93:7)",
         "“And Allah is the best of providers.” (62:11)"
     ],
-    motivated: [
+    sad: [
         "“Indeed, Allah will not change the condition of a people until they change what is in themselves.” (13:11)",
         "“So do not weaken and do not grieve, and you will be superior if you are [true] believers.” (3:139)",
         "“And those who strive for Us – We will surely guide them to Our ways.” (29:69)",
@@ -35,7 +35,7 @@ const quotes = {
         "“So remember Me; I will remember you.” (2:152)",
         "“He is with you wherever you are.” (57:4)"
     ],
-    stressed: [
+    angry: [
         "“And whoever puts all his trust in Allah, He will be enough for him.” (65:3)",
         "“Indeed, with hardship [will be] ease.” (94:6)",
         "“And We have certainly made the Quran easy for remembrance.” (54:17)",
