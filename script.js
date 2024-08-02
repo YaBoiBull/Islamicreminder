@@ -31,10 +31,3 @@ function getQuote(mood) {
         }
     });
 }
-
-    const quoteElement = document.getElementById("quote");
-    const moodQuotes = quotes[mood];
-    const randomQuote = moodQuotes[Math.floor(Math.random() * moodQuotes.length)];
-    quoteElement.innerText = randomQuote;
-    quoteElement.style.opacity = 1;
-}
