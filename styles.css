@@ -13,13 +13,14 @@ body {
 }
 
 .moon {
-    position: absolute;
     width: 60px; /* Mindre størrelse */
     height: 60px;
     border-radius: 50%;
     background-color: #ffd700; /* Gul farve til måne */
     clip-path: circle(50% at 50% 50%);
     transform: rotate(-45deg); /* Juster rotation for den rigtige halvmåneform */
+    overflow: hidden;
+    position: absolute;
 }
 
 .moon::before {
