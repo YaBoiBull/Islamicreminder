@@ -18,7 +18,16 @@ const quotes = {
 };
 
 function getQuote(mood) {
+    const moodBoxes = document.querySelectorAll('.mood-box');
+    moodBoxes.forEach(box => {
+        if (!box.classList.contains(mood)) {
+            box.classList.add('hidden');
+        } else {
+            box.classList.add('expanded');
+        }
+    });
     const moodQuotes = quotes[mood];
     const randomQuote = moodQuotes[Math.floor(Math.random() * moodQuotes.length)];
     document.getElementById("quote").innerText = randomQuote;
+    document.getElementById("quote").style.opacity = 1;
 }
