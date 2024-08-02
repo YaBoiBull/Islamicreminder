@@ -1,24 +1,25 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 50px;
-    background-color: #001f3f; /* Mørkeblå baggrundsfarve */
-    overflow: hidden; /* Skjuler elementer uden for vinduet */
+    margin: 0;
+    padding: 20px;
+    background-color: #001f3f;
+    overflow: hidden;
 }
 
 .moon-star {
     position: absolute;
-    bottom: -100px; /* Start udenfor synsfeltet */
-    animation: riseUp 10s linear infinite; /* Animationseffekt, loop */
+    bottom: -100px;
+    animation: riseUp 10s linear infinite;
 }
 
 .moon {
-    width: 60px; /* Mindre størrelse */
+    width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #ffd700; /* Gul farve til måne */
+    background-color: #ffd700;
     clip-path: circle(50% at 50% 50%);
-    transform: rotate(-45deg); /* Juster rotation for den rigtige halvmåneform */
+    transform: rotate(-45deg);
     overflow: hidden;
     position: absolute;
 }
@@ -26,10 +27,10 @@ body {
 .moon::before {
     content: '';
     position: absolute;
-    width: 40px; /* Mindre størrelse */
+    width: 40px;
     height: 60px;
     border-radius: 50%;
-    background-color: #001f3f; /* Samme farve som baggrunden */
+    background-color: #001f3f;
     left: 10px;
     top: 0;
     clip-path: circle(50% at 50% 50%);
@@ -37,11 +38,11 @@ body {
 
 .star {
     position: absolute;
-    top: 15px; /* Juster placering i forhold til den mindre måne */
-    left: 40px; /* Juster placering i forhold til den mindre måne */
-    width: 15px; /* Mindre størrelse */
+    top: 15px;
+    left: 40px;
+    width: 15px;
     height: 15px;
-    background-color: #ffd700; /* Gul farve */
+    background-color: #ffd700;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
@@ -50,25 +51,23 @@ body {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-100vh); /* Juster afhængig af ønsket bevægelse */
+        transform: translateY(-100vh);
     }
 }
 
-/* Eksisterende CSS-klasser for humørboksene */
 .mood-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 20px;
+    margin: 20px 0;
     transition: all 0.5s ease;
 }
 
 .mood-box {
-    position: relative;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
     transition: transform 0.5s, opacity 0.5s;
 }
@@ -76,8 +75,8 @@ body {
 .mood-box.expanded {
     grid-column: span 2;
     grid-row: span 2;
-    padding: 80px;
-    font-size: 2em;
+    padding: 60px;
+    font-size: 1.8em;
     text-align: center;
     display: flex;
     align-items: center;
@@ -91,26 +90,43 @@ body {
 }
 
 p#quote {
-    position: relative;
     margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: white;
     opacity: 0;
     transition: opacity 0.5s;
 }
 
 .happy {
-    background-color: #28a745; /* grøn */
+    background-color: #28a745;
 }
 
 .frustrated {
-    background-color: #f7c600; /* gul */
+    background-color: #f7c600;
 }
 
 .sad {
-    background-color: #007bff; /* blå */
+    background-color: #007bff;
 }
 
 .angry {
-    background-color: #dc3545; /* rød */
+    background-color: #dc3545;
+}
+
+/* Medieforespørgsler for mobilvenlighed */
+@media (max-width: 768px) {
+    .mood-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mood-box {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .mood-box.expanded {
+        padding: 40px;
+        font-size: 1.5em;
+    }
 }
