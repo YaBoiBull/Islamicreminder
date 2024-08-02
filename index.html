@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Islamic Quotes</title>
 </head>
 <body>
     <h1>Select Your Current Mood</h1>
-    <select id="mood">
-        <option value="happy">Happy</option>
-        <option value="sad">Sad</option>
-        <option value="motivated">Motivated</option>
-        <option value="stressed">Stressed</option>
-    </select>
-    <button onclick="getQuote()">Get Quote</button>
+    <div class="mood-container">
+        <div class="mood-box happy" onclick="getQuote('happy')">Happy</div>
+        <div class="mood-box sad" onclick="getQuote('sad')">Sad</div>
+        <div class="mood-box motivated" onclick="getQuote('motivated')">Motivated</div>
+        <div class="mood-box stressed" onclick="getQuote('stressed')">Stressed</div>
+    </div>
     <p id="quote"></p>
 
     <script src="script.js"></script>
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
