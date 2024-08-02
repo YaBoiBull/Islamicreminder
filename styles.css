@@ -53,17 +53,17 @@ p#quote {
 }
 
 .happy {
-    background-color: #f7c600; /* yellow */
+    background-color: #28a745; /* grøn */
+}
+
+.frustrated {
+    background-color: #f7c600; /* gul */
 }
 
 .sad {
-    background-color: #007bff; /* blue */
+    background-color: #007bff; /* blå */
 }
 
-.motivated {
-    background-color: #28a745; /* green */
-}
-
-.stressed {
-    background-color: #dc3545; /* red */
+.angry {
+    background-color: #dc3545; /* rød */
 }
