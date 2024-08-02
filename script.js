@@ -71,5 +71,5 @@ function getQuote(mood) {
         }
     });
 
-    header.innerText = `Your current mood is ${moodText[mood]} - Here's a quote that might help you`; // Opdater overskriften
+    header.innerText = `Your current mood is ${moodText[mood]} - Here's a quote that might give you relief`; // Opdater overskriften
 }
