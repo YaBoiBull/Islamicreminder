@@ -14,8 +14,8 @@ body {
 
 .moon {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 60px; /* Mindre størrelse */
+    height: 60px;
     border-radius: 50%;
     background-color: #ffd700; /* Gul farve til måne */
     clip-path: circle(50% at 50% 50%);
@@ -25,21 +25,21 @@ body {
 .moon::before {
     content: '';
     position: absolute;
-    width: 80px;
-    height: 100px;
+    width: 40px; /* Mindre størrelse */
+    height: 60px;
     border-radius: 50%;
     background-color: #001f3f; /* Samme farve som baggrunden */
-    left: 20px;
+    left: 10px;
     top: 0;
     clip-path: circle(50% at 50% 50%);
 }
 
 .star {
     position: absolute;
-    top: 20px;
-    left: 70px;
-    width: 20px;
-    height: 20px;
+    top: 15px; /* Juster placering i forhold til den mindre måne */
+    left: 40px; /* Juster placering i forhold til den mindre måne */
+    width: 15px; /* Mindre størrelse */
+    height: 15px;
     background-color: #ffd700; /* Gul farve */
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
