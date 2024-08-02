@@ -51,6 +51,14 @@ const quotes = {
 
 function getQuote(mood) {
     const moodBoxes = document.querySelectorAll('.mood-box');
+    const header = document.getElementById('header'); // Hent overskriften
+    const moodText = {
+        happy: "Happy/Calm",
+        frustrated: "Frustrated/Embarrassed",
+        sad: "Sad",
+        angry: "Angry"
+    };
+    
     moodBoxes.forEach(box => {
         box.classList.remove('hidden', 'expanded');
         if (!box.classList.contains(mood)) {
@@ -62,4 +70,6 @@ function getQuote(mood) {
             box.innerText = randomQuote; // Erstat boksteksten med citatet
         }
     });
+
+    header.innerText = `Your current mood is ${moodText[mood]} - Here's a quote that might help you`; // Opdater overskriften
 }
